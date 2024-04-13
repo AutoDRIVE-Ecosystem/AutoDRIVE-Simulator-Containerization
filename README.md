@@ -10,7 +10,7 @@ Each test is stored in its own sub-folder, under _palmetto/_. In order to reprod
 
 It is assumed that you have an installation of the proper version of AutoDRIVE Simulator. Please refer to the instructions below to setup a containerized installation of AutoDRIVE Simulator, by use of a sandboxed singularity container. 
 
-All tests also rely on the **autodrive** conda environment being available to you on Palmetto. This environment can be re-created, as needed, from the file _palmetto/environment.yml_, using the following command 
+All tests also rely on the **autodrive** conda environment being available to you on Palmetto. This environment can be recreated, as needed, from the file _palmetto/environment.yml_, using the following command 
 
     conda env create -n autodrive -f environment.yml
 
@@ -22,5 +22,4 @@ After having uploaded this image to dockerhub, you may build a singularity sandb
 
     cd ~
     singularity build --sandbox autodrive_simulator/ docker://<user>/<image_name>
-
 
