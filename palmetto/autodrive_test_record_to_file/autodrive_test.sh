@@ -11,6 +11,9 @@ export TEST_DIR=/home/giovanm/autodrive_test_record_to_file/
 export SIMULATOR_DIR=/home/giovanm/autodrive_simulator_autoconnect_weather_time/
 export XDG_RUNTIME_DIR=/tmp/runtime-dir
 
+# Record job performance metrics
+jobperf -record -w -rate 5s -record-db $TEST_DIR/autodrive_test_perf.db > /dev/null 2>&1 &
+
 # Activate the autodrive conda environment
 module add anaconda3/2022.05-gcc/9.5.0
 source activate autodrive
