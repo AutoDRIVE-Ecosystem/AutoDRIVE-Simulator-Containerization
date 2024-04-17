@@ -21,3 +21,4 @@ node_modules/
 hpc_metrics_*.csv
 hpc_metrics_*_processed.csv
 aeb_metrics_*.csv
+Makefile
