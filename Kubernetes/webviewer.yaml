@@ -1,0 +1,61 @@
+# Deployment for webviewer pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: autodrive-simulator
+  name: webviewer
+  labels:
+    app: webviewer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      imagePullSecrets:
+        - name: rcd-reg-cred
+      containers:
+      - name: webapp-container
+        image: registry.rcd.clemson.edu/viprgs_v_n_v/hpc_cloud_solutions/webviewer:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      - name: nodebackend
+        image: registry.rcd.clemson.edu/viprgs_v_n_v/hpc_cloud_solutions/nodebackend:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 3000
+
+---
+# Service to expose webviewer
+apiVersion: v1
+kind: Service
+metadata:
+  name: webviewer-service
+spec:
+  selector:
+    app: webapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+
+---
+# Service to expose control server
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-backend-service
+spec:
+  selector:
+    app: webapp
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort

@@ -1,0 +1,20 @@
+rcd-reg-cred.yaml
+AutoDRIVE_Simulator/
+__pycache__/
+logs/
+models/
+archive/
+old_AutoDRIVE_Simulator
+"AutoDRIVE Simulator"/
+AutoDRIVE_API/
+"AutoDRIVE API"/
+AutoDRIVE Simulator.zip
+docker-ubuntu-xfce-container-master/
+archived/
+AutoDRIVE_API_old/
+AutoDRIVE_Simulator_old/
+metrics.csv
+aeb_metrics.csv
+metrics_archive/
+node_modules/*
+node_modules/

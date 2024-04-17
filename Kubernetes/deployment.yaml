@@ -1,0 +1,47 @@
+####################################################
+#
+#   Deployment for AutoDRIVE HPC Framework
+#
+####################################################
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: autodrive-simulator
+  name: autodrive
+  labels:
+    app: autodrive
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: autodrive
+  template:
+    metadata:
+      labels:
+        app: autodrive
+    spec:
+      imagePullSecrets:
+        - name: rcd-reg-cred
+      containers:
+      - name: autodrive
+        image: registry.rcd.clemson.edu/viprgs_v_n_v/hpc_cloud_solutions/autodrive-1:latest
+        imagePullPolicy: Always
+        env:
+        - name: DISPLAY
+          value: ":20"
+        - name: "XDG_RUNTIME_DIR" 
+          value: "/tmp/runtime-dir"
+        command:
+        - ./entrypoint.sh
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      - name: autodrive-api
+        image: registry.rcd.clemson.edu/viprgs_v_n_v/hpc_cloud_solutions/autodrive-api:latest
+        imagePullPolicy: Always
+        command: ["python"]
+        args: ["AutoDRIVE_API/rzr_aeb.py"]
+        ports:
+        - containerPort: 4567

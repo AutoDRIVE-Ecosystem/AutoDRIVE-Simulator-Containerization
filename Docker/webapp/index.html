@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoDRIVE WebViewer</title>
+  <link rel="icon" type="image/png" href="images/AutoDRIVE-Logo.png"/>
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+  <img src="images/AutoDRIVE-Banner.jpg" alt="AutoDRIVE Banner" class="banner-image">
+  <h1>AutoDRIVE Simulator WebViewer</h1>
+  <div id="videoGrid" class="video-grid"></div>
+  <div class="footer">
+    <img src="images/Institution-CUICAR.png" alt="CUICAR Logo" class="footer-logo">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="loadStreams.js"></script>
+  <script>
+
+    function resetServer() {
+
+      const url = "http://10.128.199.51:30837/reset"
+      fetch(url, {method: "POST"})
+
+    }
+
+  </script>
+  <button onclick="resetServer()">Reload Video Feed</button>
+</body>
+</html>

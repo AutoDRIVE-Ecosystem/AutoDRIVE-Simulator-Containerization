@@ -1,0 +1,17 @@
+####################################################
+#
+#   Headless service to expose simulation pods
+#
+####################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: sim-gateway
+spec:
+  selector:
+    app: autodrive
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  clusterIP: None
