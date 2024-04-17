@@ -1,20 +1,18 @@
 # AutoDRIVE Simulator HPC
 
 This repository contains HPC deployments of the AutoDRIVE Simulator.
+todo: add overall project description
 
-# Branches
+# SETUP
 
-todo: Add description for each branch
+todo: add setup steps
 
-## Rancher Branch Structure
+# USAGE
 
-Docker/
- - Contains the files necessary to compile the docker images for use in the rancher cluster.
+todo: add usage
 
-Kubernetes/
- - Contains the kubernetes deployments for the cluster.
+## File Structure
 
-Python/
- - Contains the python libraries used to specify simulation automation & data collection.
+## Known Issues
 
 note: this readme is still being updated.
