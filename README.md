@@ -1,7 +1,6 @@
 # AutoDRIVE Simulator HPC
 
 This repository contains HPC deployments of the AutoDRIVE Simulator.
-todo: add overall project description
 
 # SETUP
 
@@ -46,4 +45,4 @@ subprocess + kubetl or via the python kubernetes client). There is a large amoun
 the automation library, but it can still be an issue for large workloads querying the same node in a cluster multiple 
 times.
 
-**NOTE: this readme is *still being updated!* Some details of the setup & usage are currently missing.**
+**NOTE: this readme is *still being updated.* Some details of the setup & usage are currently missing.**
