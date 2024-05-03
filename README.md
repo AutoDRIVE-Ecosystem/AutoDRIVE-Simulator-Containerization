@@ -2,6 +2,10 @@
 
 This repository contains HPC deployments of the AutoDRIVE Simulator.
 
+This project utlizes the Kubernetes API to enable dynamic, scalable, and disposable AutoDRIVE simulations on an HPC cluster. The basic structure of a project's deployment is displayed in the graphic below. Each simulation pod contains a AutoDRIVE simulation container and an AutoDRIVE Devkit container integrated with the python HPC Framework Data Logging Module. Simulation batches are scripted with the python HPC Framework Automation Module to allow for dynamic simulation cases across HPC resources. Simulation data is collected from a control server pod located inside the kubernetes cluster & exports data to a thin client. Additionally live simulations can be monitored from the AutoDRIVE Simulation Webviewer. 
+
+![Workflow Diagram](/imgs/hpc_system_overview.png)
+
 # SETUP
 
 **Pre-requisites**: Kubectl, Docker, Python 3.8+, python packages listed in requirements.txt, download desired versions
@@ -13,6 +17,29 @@ of AutoDRIVE simulator & AutoDRIVE devkit, configure Kubectl with access to desi
  - requirement.txt
 - Download AutoDRIVE Devkit & Simulator
 - Pull Dockerfiles -->
+
+### Rancher/Gitlab Container Instructions
+
+These steps outline how to properly build and run docker images hosted on a gitlab container registry, as well as how to properly configure a rancher cluster to pull from a project's container registry. These steps assume docker & kubectl are already installed on a user's machine.
+
+
+1. Download the KubeConfig from the top righthand corner of the Rancher dashboard & apply it to your kubectl by pointing the environment variable ``` KUBECONFIG ``` to the downloaded configuation file's location. Be sure to test your connectivity to the cluster with a basic kubectl commands such as ``` kubectl get pods ```.
+
+![KubeConfig Download](imgs/kubeconfigdownload.png)
+<br>
+
+2. An authentication token is needed in order to access the Gitlab container registry for the project. Use the ``` auth ``` command inside ```/Docker/Makefile``` to generate an authentication file for the container registry, insert your token in as the requested password. This will also generate a ``` rcd-reg-cred.yaml ``` which can be applied to the cluster to give kubernetes access to the Gitlab registry. Be sure to update the appropriate Username & Server IP in the Makefile command.
+<br>
+
+3. To build a docker image that is going to be hosted in the container registry tag it using the structure ``` <server_url>/<gitlab_group>/<project_name>/<container_name> ```.
+<br>
+
+4. After building the docker image with the proper naming structure & authenticating with docker, you should be able to push the built image to the container registry with ``` docker push <tag> ```. The pushed container should appear in the selected gitlab project's registry found by selecting **Deploy --> Container Registry**. You may need your project owner to enable this feature. ```/Docker/Makefile``` has examples of commands to deploy the containers used in this project. 
+
+![Container Registry](/imgs/container_registry.png)
+<br>
+
+5. You should now be able to run docker images hosted in the container registry on the cluster & use them in your deployments.
 
 # USAGE
 
