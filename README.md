@@ -90,3 +90,18 @@ This branch, in conjunction with others such as the [palmetto](https://github.co
     <p align="center">
     <img src="https://github.com/AutoDRIVE-Ecosystem/AutoDRIVE-Simulator-HPC/blob/rzr-aeb/media/rzr-aeb-demo.gif"/>
     </p>
+
+## CITATION
+
+#### [Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters](https://arxiv.org/abs/2405.04743)
+```bibtex
+@eprint{AutoDRIVE-HPC-RZR-2024,
+title={Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters}, 
+author={Tanmay Vilas Samak and Chinmay Vilas Samak and Joey Binz and Jonathon Smereka and Mark Brudnak and David Gorsich and Feng Luo and Venkat Krovi},
+year={2024},
+eprint={2405.04743},
+archivePrefix={arXiv},
+primaryClass={cs.RO}
+}
+```
+This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS). Distribution Statement A. Approved for public release; distribution is unlimited. OPSEC #8451.**
