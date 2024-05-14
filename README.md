@@ -86,5 +86,3 @@ primaryClass={cs.RO}
 }
 ```
 This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS). Distribution Statement A. Approved for public release; distribution is unlimited. OPSEC #8451.**
-
-**NOTE: this readme is *still being updated.* Some details of the setup & usage are currently missing.**

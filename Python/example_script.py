@@ -4,8 +4,8 @@ if __name__ == '__main__':
 
     total_batches = 5
     batch_num = 0
-    batch_size= 8
-    simulation_length = 60*5
+    batch_size= 16
+    simulation_length = 30 # Seconds
 
     ##############################################
     #

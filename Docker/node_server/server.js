@@ -13,16 +13,17 @@ const port = 3000;
 var database = [] // Array for storing sent metrics
 
 // VNV Parameters
-// const weather_ids = [1, 2, 3, 4, 5, 6, 7, 8];
-// const times = [[0, 360], [720, 1080]];
-// const models = ["yolov2", "yolov2", "yolov2-tiny", "yolov2-tiny", "yolov3", "yolov3", "yolov3-tiny", "yolov3-tiny"]
+const weather_ids = [1, 2, 3, 4, 5, 6, 7, 8];
+const times = [[0, 360], [720, 1080]];
+const models = ["yolov2", "yolov2", "yolov2-tiny", "yolov2-tiny", "yolov3", "yolov3", "yolov3-tiny", "yolov3-tiny"]
 
 // Stress Test / Constant Condition Parameters
 // Weather ids: [0=Custom, 1=Sunny, 2=Cloudy, 3=LightFog, 4=HeavyFog, 5=LightRain, 6=HeavyRain, 7=LightSnow, 8=HeavySnow]
 
-const weather_ids = [1, 1, 1, 1, 1, 1, 1, 1];
-const times = [560, 560];
-const models = ["yolov3"];
+// Stress Test Parameters
+// const weather_ids = [1, 1, 1, 1, 1, 1, 1, 1];
+// const times = [560, 560];
+// const models = ["yolov3"];
 
 // Simulation Condition selection parameter needed
 // Iterate through times[0-1] and model[0-4] for 8 conditions
