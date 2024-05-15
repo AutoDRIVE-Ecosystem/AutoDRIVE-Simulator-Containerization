@@ -16,10 +16,10 @@ All tests also rely on the **autodrive** conda environment being available to yo
 
 ## Containerized AutoDRIVE Simulator Installation on Palmetto 
 
-In order perform the installation, you first need to procure a docker image for the correct version of AutoDRIVE Simulator. This image can be built using the instructions provided in this same repository, under the **docker** branch.
+In order perform the installation, you first need to procure a docker image for the correct version of AutoDRIVE Simulator. This image can either be built using the instructions provided in this same repository, under the **docker** branch, or the *autodriveecosystem/autodrive_sim_opencav* pre-built dockerhub image may be used instead.
 
-After having uploaded this image to dockerhub, you may build a singularity sandbox for it under your Palmetto home folder, as follows 
+You may build a singularity sandbox for it under your Palmetto home folder, as follows 
 
     cd ~
-    singularity build --sandbox autodrive_simulator/ docker://<user>/<image_name>
+    singularity build --sandbox autodrive_simulator/ docker://autodriveecosystem/autodrive_sim_opencav
 
