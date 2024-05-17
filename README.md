@@ -1,4 +1,4 @@
-# AutoDRIVE Simulator: Palmetto Cluster
+# AutoDRIVE Simulator: Palmetto Cluster Deployments
 
 This branch contains various AutoDRIVE Simulator tests, which focus on AEB algorithm testing for OpenCAV.
 
