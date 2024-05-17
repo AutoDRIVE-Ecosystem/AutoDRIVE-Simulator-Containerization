@@ -1,4 +1,4 @@
-# AutoDRIVE Simulator HPC
+# AutoDRIVE Simulator: Rancher Cluster
 
 This repository contains HPC deployments of the AutoDRIVE Simulator.
 
