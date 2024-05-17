@@ -25,7 +25,7 @@ These steps outline how to properly build and run docker images hosted on a gitl
 
 1. Download the KubeConfig from the top righthand corner of the Rancher dashboard & apply it to your kubectl by pointing the environment variable ``` KUBECONFIG ``` to the downloaded configuation file's location. Be sure to test your connectivity to the cluster with a basic kubectl commands such as ``` kubectl get pods ```.
 
-![KubeConfig Download](/Media/kubeconfigdownload.png)
+![KubeConfig Download](/Media/kubeconfig_download.png)
 <br>
 
 2. An authentication token is needed in order to access the Gitlab container registry for the project. Use the ``` auth ``` command inside ```/Docker/Makefile``` to generate an authentication file for the container registry, insert your token in as the requested password. This will also generate a ``` rcd-reg-cred.yaml ``` which can be applied to the cluster to give kubernetes access to the Gitlab registry. Be sure to update the appropriate Username & Server IP in the Makefile command.
