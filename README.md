@@ -1,4 +1,4 @@
-# AutoDRIVE Simulator Containerization
+# AutoDRIVE Simulator: Docker Containerization
 
 This repository provides the necessary files to build a docker image for AutoDRIVE Simulator. 
 
