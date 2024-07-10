@@ -8,7 +8,7 @@ This project utlizes the Kubernetes API to enable dynamic, scalable, and disposa
 
 ## SETUP
 
-**Pre-requisites**:
+**Prerequisites**:
 - `kubectl`
 - `Docker`
 - `Python 3.8+`
@@ -51,17 +51,16 @@ If using Clemson University's Rancher cluster, [`example_script.py`](Python/exam
 
 ## FILE STRUCTURE
 
-**[Docker](Docker)**: The `Docker` directory contains all necessary files to compile Docker images containing the AutoDRIVE
+- **[Docker](Docker)**: The `Docker` directory contains all necessary files to compile Docker images containing the AutoDRIVE
 Simulator, AutoDRIVE Devkit, AutoDRIVE HPC Webviewer, and the backend control server. A Makefile contains the necessary commands
-to compile each Docker image. The Dockerfiles expect the `AutoDRIVE_API` and `AutoDRIVE_Simulator` directories to be
-placed here (populated with Simulator & Devkit files).
+to compile each Docker image. The Dockerfiles expect the `AutoDRIVE_API` and `AutoDRIVE_Simulator` directories to be placed here
+(populated with Simulator & Devkit files). It should be noted the [`logger.py`](Docker/AutoDRIVE_API/logger.py) file may need to
+be moved into a new `AutoDRIVE_API` folder & integrated into the [AutoDRIVE DevKit](Docker/AutoDRIVE_API/rzr_aeb.py) script in
+order to enable data collection from pods inside the cluster.
 
-It should be noted the [`logger.py`](Docker/AutoDRIVE_API/logger.py) file may need to be moved into a new `AutoDRIVE_API` folder & integrated into the
-[AutoDRIVE DevKit](Docker/AutoDRIVE_API/rzr_aeb.py) script in order to enable data collection from pods inside the cluster.
+- **[Kubernetes](Kubernetes)**: The `Kubernetes` directory contains the `YAML` files for deployments used in the cluster. 
 
-**[Kubernetes](Kubernetes)**: The `Kubernetes` directory contains the `YAML` files for deployments used in the cluster. 
-
-**[Python](Python)**: The `Python` directory holds all the necessary scripts to control simulations running in the cluster, using
+- **[Python](Python)**: The `Python` directory holds all the necessary scripts to control simulations running in the cluster, using
 [`automation_module.py`](Python/automation_module.py). Most variables can be updated using the [`config.ini`](Python/config.ini) file. 
 
 ## KNOWN ISSUES
