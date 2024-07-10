@@ -20,3 +20,11 @@ For testing purposes, you may want to use a local version of the AutoDRIVE Simul
 ```bash
 docker build -t autodrive_simulator . --build-arg VERSION=local
 ```
+
+## Running the AutoDRIVE Simulator Docker Image
+
+To run the built Docker image for AutoDRIVE Simulator, execute:
+```bash
+xhost local:root
+docker run --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp.X11-umix:rw --env DISPLAY --privileged --gpus all autodrive_simulator
+```
