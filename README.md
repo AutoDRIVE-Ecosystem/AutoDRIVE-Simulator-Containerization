@@ -31,7 +31,7 @@ xhost local:root
 docker run --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp.X11-umix:rw --env DISPLAY --privileged --gpus all autodrive_simulator
 ```
 
-## Generally Helpful Docker Tips:
+## Generally Helpful Docker Tips
 1. To access the container while it is running, execute the following command in a new terminal window to start a new bash session inside the container:
 ```bash
 $ docker exec -it <container_name> bash
