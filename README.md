@@ -24,3 +24,10 @@ You may build a Singularity sandbox for it under your Palmetto `home` folder usi
 cd ~
 singularity build --sandbox autodrive_simulator/ docker://autodriveecosystem/autodrive_sim_opencav
 ```
+
+## Start Instance of the Sandbox
+
+Once the image is built and written to the destination, start the instance of the sandbox using the following command:
+```bash
+singularity instance start --nv -B $HOME,$TMPDIR autodrive_simulator/ inst1
+```
