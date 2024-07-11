@@ -1,6 +1,6 @@
 # AutoDRIVE Simulator: Rancher Cluster Deployments
 
-This repository contains HPC deployments of the AutoDRIVE Simulator.
+This branch hosts resources for deployments of the AutoDRIVE Simulator on Rancher HPC cluster.
 
 This project utlizes the Kubernetes API to enable dynamic, scalable, and disposable AutoDRIVE simulations on an HPC cluster. The basic structure of a project's deployment is displayed in the graphic below. Each simulation pod contains an `AutoDRIVE Simulator` container and an `AutoDRIVE Devkit` container integrated with the `Python HPC Framework Data Logging Module`. Simulation batches are scripted with the `Python HPC Framework Automation Module` to allow for dynamic simulation cases across HPC resources. Simulation data is collected from a control server pod located inside the Kubernetes cluster, which exports data to a thin client. Additionally, live simulations can be monitored from the `AutoDRIVE HPC Webviewer`.
 
