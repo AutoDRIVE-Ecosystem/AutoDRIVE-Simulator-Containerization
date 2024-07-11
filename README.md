@@ -31,3 +31,10 @@ Once the image is built and written to the destination, start the instance of th
 ```bash
 singularity instance start --nv -B $HOME,$TMPDIR autodrive_simulator/ inst1
 ```
+
+## Run Instance of the Sandbox
+
+Run the started instance of the sandbox using the following command (the `writable` flag allows us to make changes within the container should we need to save these changes as images):
+```bash
+singularity run --writable --nv -B $HOME,$TMPDIR instance://inst1
+```
