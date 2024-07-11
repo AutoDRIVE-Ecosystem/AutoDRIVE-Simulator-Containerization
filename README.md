@@ -1,6 +1,6 @@
 # AutoDRIVE Simulator: Docker Containerization
 
-This branch provides the necessary resources to build and run a Docker image for [AutoDRIVE Simulator](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator).
+This branch hosts the necessary resources to build and run a Docker image for [AutoDRIVE Simulator](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator).
 
 > [!NOTE]
 > - It is assumed that [Docker](https://docs.docker.com/engine/install) is installed.
