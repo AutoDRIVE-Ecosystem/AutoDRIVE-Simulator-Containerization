@@ -1,10 +1,10 @@
 # AutoDRIVE Simulator: Palmetto Cluster Deployments
 
-This branch contains various AutoDRIVE Simulator tests, which focus on AEB algorithm testing for OpenCAV.
+This branch hosts resources for deployments of the AutoDRIVE Simulator on Palmetto HPC cluster.
 
-They are meant to be run on Palmetto - Clemson's High-Performance Computing cluster. 
+The overall project objective focuses on variability testing of the AEB functionality (SUT) for OpenCAV.
 
-Each test is stored in its own sub-folder, under _palmetto/_. In order to reproduce any one of these tests, you need to upload the corresponding sub-folder to your Palmetto home folder, update the relevant paths within each script, and then submit the corresponding job script via Palmetto's QSUB scheduler:
+Each test is stored in its own sub-folder, under _palmetto/_. In order to reproduce any one of these tests, you need to upload the corresponding sub-folder to your Palmetto home folder, update the relevant paths within each script, and then submit the corresponding job script via Palmetto's `QSUB` scheduler:
 
     qsub autodrive_test.sh
 
