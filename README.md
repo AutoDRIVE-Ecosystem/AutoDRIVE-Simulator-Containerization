@@ -80,8 +80,8 @@ times.
 #### [Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters](https://arxiv.org/abs/2405.04743)
 ```bibtex
 @inproceedings{DT-HPC-VnV-2024,
-title={Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters},
 author={{Samak, Tanmay} and {Samak, Chinmay} and {Krovi, Venkat} and {Binz, Joey} and {Luo, Feng} and {Smereka, Jonathon} and {Brudnak, Mark} and {Gorsich, David}},
+title={Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters},
 booktitle={2024 NDIA Michigan Chapter Ground Vehicle Systems Engineering and Technology Symposium},
 publisher={National Defense Industrial Association},
 month={sep},
