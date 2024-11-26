@@ -79,13 +79,15 @@ times.
 
 #### [Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters](https://arxiv.org/abs/2405.04743)
 ```bibtex
-@eprint{AutoDRIVE-HPC-RZR-2024,
-title={Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters}, 
-author={Tanmay Vilas Samak and Chinmay Vilas Samak and Joey Binz and Jonathon Smereka and Mark Brudnak and David Gorsich and Feng Luo and Venkat Krovi},
+@inproceedings{DT-HPC-VnV-2024,
+title={Off-Road Autonomy Validation Using Scalable Digital Twin Simulations Within High-Performance Computing Clusters},
+author={{Samak, Tanmay} and {Samak, Chinmay} and {Krovi, Venkat} and {Binz, Joey} and {Luo, Feng} and {Smereka, Jonathon} and {Brudnak, Mark} and {Gorsich, David}},
+booktitle={2024 NDIA Michigan Chapter Ground Vehicle Systems Engineering and Technology Symposium},
+publisher={National Defense Industrial Association},
+month={sep},
 year={2024},
-eprint={2405.04743},
-archivePrefix={arXiv},
-primaryClass={cs.RO}
+doi={https://doi.org/10.4271/2024-01-4111},
+url={https://doi.org/10.4271/2024-01-4111}
 }
 ```
 This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS).** The publication can be found on [GVSETS Library](https://ndia-mich.org/images/events/gvsets/2024/papers/MSPV/320PMO~1.PDF), and is archived on [SAE Mobilus](https://doi.org/10.4271/2024-01-4111).
