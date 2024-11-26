@@ -88,4 +88,4 @@ archivePrefix={arXiv},
 primaryClass={cs.RO}
 }
 ```
-This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS). Distribution Statement A. Approved for public release; distribution is unlimited. OPSEC #8451.**
+This work has been accepted at **2024 Ground Vehicle Systems Engineering and Technology Symposium (GVSETS).** The publication can be found on [GVSETS Library](https://ndia-mich.org/images/events/gvsets/2024/papers/MSPV/320PMO~1.PDF), and is archived on [SAE Mobilus](https://doi.org/10.4271/2024-01-4111).
